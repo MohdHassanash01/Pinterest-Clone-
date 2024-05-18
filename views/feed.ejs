@@ -1,0 +1,426 @@
+<!-- <% include ./partials/header.ejs %>
+
+<div class="w-full min-h-screen bg-zinc-800 px-10 py-8 text-white">
+
+    <div class="cards flex flex-wrap gap-10 ">
+
+        <% posts.forEach(function(item){%>
+
+            <div class="card w-52 h-40 rounded-lg">
+
+                <div class="w-full h-40 bg-pink-200 rounded-lg overflow-hidden bg-zinc-700">
+    
+                    <img class="w-full h-full object-cover rounded-lg"  alt="" src="/images/uploads/<%= item.image %>">
+                </div>
+    
+                <h2 class="mt-2 text-xl"><%= item.title %><h2>
+                    
+                 <h4 class=" text-sm">
+                    <%= item.description %>
+                 </h4>   
+
+
+    
+            </div>
+    
+
+        <%})%>
+
+
+
+
+    </div>
+</div>
+
+<% include ./partials/footer.ejs %> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *
+{
+  margin: 0;
+  padding: 0;
+  background-color: #262626;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad          Pro", "DejaVu Sans Condensed", Helvetica, Arial,        "sans-serif";
+}
+
+
+
+
+
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  padding: 20px 0px;
+  font-size: 30px;
+}
+
+.container
+{
+  padding-top: 40px;
+  width: 1400px;
+  margin: auto;
+  columns: 6;
+  column-gap: 20px;
+  
+}
+.container .box
+{
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  border-radius: 15px;
+}
+.container .box img
+{
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 10px;
+}
+
+
+img:hover {
+  
+  opacity: .95;
+  box-shadow: rgba(253, 253, 253, 0.2) 0px 7px 29px 0px;
+}
+
+.caption{
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2px;
+}
+
+@media (max-width: 1427px)
+{
+  .container
+  {
+    columns: 5;
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 1200px)
+{
+  .container
+  {
+    columns: 4;
+  }
+}
+
+@media (max-width: 1000px)
+{
+  .container
+  {
+    columns: 3;
+  }
+  
+  
+  body{
+    overflow-x: hidden;
+  }
+  
+  .navLink{
+      position: absolute;
+      right: 0px;
+      height: 20vh;
+      top: 10vh;
+      background-color: #000; 
+      display: flex;
+      flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    opacity: 0.9;
+  }
+  
+  .navLink li{
+    opacity: 1;
+  }
+  
+  .lines{
+    display: block;
+  }
+  
+  .nav-active{
+    transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade{
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+      }
+    
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+      }
+    }
+  
+  
+  .toggle .l1{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+  
+  .toggle .l2{
+    opacity: 0;
+  }
+  
+  .toggle .l3{
+    transform: rotate(45deg) translate(-5px,-6px);
+  }
+}
+  
+  
+
+
+@media (max-width: 786px)
+{
+  .container
+  {
+    columns: 2;
+  }
+}
+
+
+@media (max-width: 480px)
+{
+  .container
+  {
+    columns: 1;
+  }
+}
+    </style>
+
+</head>
+
+<body>
+
+<% include ./partials/header.ejs %>
+
+<hr class="opacity-30 mt-4">
+
+<header>
+ <h1 class="tracking-wide text-red-500 hover:text-white">Pinterest Home page </h1>
+</header> 
+<hr class="opacity-30 mt-1">
+
+
+ 
+<div class="container">
+     
+ 
+     
+    <div class="cards flex flex-wrap gap-10 ">
+
+        <% posts.forEach(function(item){%>
+
+            <div class="card w-52 h-40 rounded-lg m-10 ">
+
+                <div class="w-full h-40 bg-pink-200 rounded-lg overflow-hidden bg-zinc-700">
+    
+                    <img class="w-full h-full object-cover rounded-lg"  alt="" src="/images/uploads/<%= item.image %>">
+                </div>
+    
+                <h2 class="mt-2 text-xl text-white"><%= item.title %><h2>
+                    
+                 <h4 class=" text-sm text-white">
+                    <%= item.description %>
+                 </h4>   
+
+
+    
+            </div>
+    
+
+        <%})%>
+
+
+
+
+    </div>   
+ 
+     
+
+   
+     
+<div class="box">
+               <a href="https://sciencecalx.com/wp-content/uploads/2023/07/chemistry.png" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2021/08/newStopCropped1.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/003.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/003.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/002.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/002.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/001.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/001.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/006.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/006.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/007.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/007.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/008.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/008.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/009-scaled.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/009-scaled.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/010.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/010.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/011.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/011.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/012.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/012.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/013.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/013.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/014.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/014.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/015.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/015.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/016.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/016.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/021.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/021.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+      
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/019.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/019.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/020.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/020.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/022.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/022.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/023.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/023.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/024.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/024.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/025.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/025.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/026.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/026.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/027.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/027.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/028.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/028.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div> 
+     
+<div class="box">
+               <a href="https://orionstardesign.com/wp-content/uploads/2023/08/029.jpg" >
+               <img src="https://orionstardesign.com/wp-content/uploads/2023/08/029.jpg" alt="image"></a>
+           <div class="caption">Lorem ipsum </div>
+ </div>
+
+</div>
+ 
+ 
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script src="app.js"></script>
+</body>
+
+
+</html>
